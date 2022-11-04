@@ -1,0 +1,35 @@
+@port = 8800
+@Host =  http://localhost
+
+@route = api/users
+
+
+
+###
+
+GET {{Host}}:{{port}}/{{route}}/all
+
+
+
+###
+
+GET {{Host}}:{{port}}/{{route}}/friends/6362aeeaa4d45941f4c7719e
+
+
+###
+PUT {{Host}}:{{port}}/{{route}}
+Content-Type: application/json
+
+
+{
+    "name":"nena2"
+}
+###
+
+PUT {{Host}}:{{port}}/{{route}}/6362aeeaa4d45941f4c7719e/follow
+Content-Type: application/json
+
+{
+    "userId":"6362ac8aa4d45941f4c77199"
+    
+}

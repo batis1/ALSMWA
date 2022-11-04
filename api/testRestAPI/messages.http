@@ -1,0 +1,38 @@
+@port = 8800
+@Host =  http://localhost
+
+@route = api/messages
+
+###
+
+POST {{Host}}:{{port}}/{{route}}
+Content-Type: application/json
+
+{
+    "conversationId":"6362aeeaa4d45941f4c7719e",
+    "senderId":"6362ac8aa4d45941f4c77199",
+    "text":"how are you doing?"
+}
+###
+POST {{Host}}:{{port}}/{{route}}
+Content-Type: application/json
+
+{
+    "senderId":"6362aeeaa4d45941f4c7719e",
+    "receiverId":"6362ac81a4d45941f4c77198"
+}
+###
+GET {{Host}}:{{port}}/{{route}}/6362ac8aa4d45941f4c77199
+###
+Delete {{Host}}:{{port}}/{{route}}/6362b620a4d45941f4c771a5
+
+###
+
+POST {{Host}}:{{port}}/{{route}}/login
+Content-Type: application/json
+
+{
+    "email":"batis1@gmail.com",
+    "password":"123456789"
+}
+

@@ -1,0 +1,25 @@
+@port = 8800
+@Host =  http://localhost
+
+@route = api/auth
+###
+POST {{Host}}:{{port}}/{{route}}/register
+Content-Type: application/json
+
+{
+    "username":"batis10",
+    "email":"batis10@gmail.com",
+    "password":"12345679"
+  
+}
+
+###
+
+POST {{Host}}:{{port}}/{{route}}/login
+Content-Type: application/json
+
+{
+    "email":"batis1@gmail.com",
+    "password":"123456789"
+}
+
